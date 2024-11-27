@@ -9,7 +9,7 @@ def main(request):
 def login(request):
     return render(request, 'servi/login.html')
 #
-def regsitro(request):
+def registro(request):
     return render(request, 'servi/registro.html')
 #
 def reservas(request):
