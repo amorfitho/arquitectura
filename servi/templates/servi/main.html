@@ -22,8 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           </ul>
-          <button class="btn btn-primary" type="button" onclick="location.href='/servi/templates/servi/login.html'">iniciar
-            sesion</button>
+          <button class="btn btn-primary" type="button" onclick="location.href='{% url 'login' %}'">Iniciar sesión</button>
         </div>
       </div>
     </nav>
@@ -79,7 +78,7 @@
             <div class="card custom-card">
               <div class="card-body">
                 <h5 class="card-title">Puedes revisar nuestros servicios aquí </h5>
-                <a href="../templates/servi/servicios.html" class="btn btn-primary custom-btn">Ver servicios</a>
+                <a href="{% url 'servicios' %}" class="btn btn-primary custom-btn">Ver servicios</a>
               </div>
             </div>
           </div>
