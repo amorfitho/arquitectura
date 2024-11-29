@@ -15,7 +15,7 @@
 <body>
     <header>
         <!-- place navbar here -->
-        <button onclick="location.href='{% url 'main' %}'" type="submit" class="btn btn-primary volver">Volver al inicio </button>        
+        <button href="{% url 'main' %}" type="submit" class="btn btn-primary volver">Volver al inicio </button>        
         <section>
             <div class="contenedor">
                 <div class="card">
@@ -37,11 +37,11 @@
                                     <a href="#">Olvidé la contraseña</a>
                                 </label>
                             </div>
-                            <button type="submit" type="button" class="btn btn-primary" onclick="location.href='../HTML/main.html'">Iniciar</button>
+                            <button type="submit" type="button" class="btn btn-primary" href="{% url 'main' %}>Iniciar</button>
                         </form>
                         <div class="registrar">
                             <p>¿No tiene una cuenta? <a href="{% url 'registro' %}">Registrarse</a></p>
-                            <a href="../HTML/empleado.html">Empleado</a>
+                            <a href="{% url 'empleados' %}"">Empleado</a>
                         </div>
                     </div>
                 </div>
