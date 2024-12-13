@@ -2,33 +2,33 @@ from django.shortcuts import render
 
 # Create your views here.
 
-#
+#--------------------------------------------------------------------------------------------------
 def main(request):
     return render(request, 'servi/main.html')
-#
+#--------------------------------------------------------------------------------------------------
 def login(request):
-    return render(request, 'servi/login.html')
-#
+    return render(request, 'registration/login.html')
+#--------------------------------------------------------------------------------------------------
 def registro(request):
-    return render(request, 'servi/registro.html')
-#
+    return render(request, 'registration/registro.html')
+#--------------------------------------------------------------------------------------------------
 def reservas(request):
-    return render(request, 'servi/reservas.html')
-#
+    return render(request, 'servi/reserv/reservas.html')
+#--------------------------------------------------------------------------------------------------
 def reservas2(request):
-    return render(request, 'servi/reservas2.html')
-#
+    return render(request, 'servi/reserv/reservas2.html')
+#--------------------------------------------------------------------------------------------------
 def servicios(request):
-    return render(request, 'servi/servicios.html')
-#
+    return render(request, 'servi/serv/servicios.html')
+#--------------------------------------------------------------------------------------------------
 def productos(request):
-    return render(request, 'servi/productos.html')
-#
-def empleados(request):
-    return render(request, 'servi/empleados.html')
-#
+    return render(request, 'servi/serv/productos.html')
+#--------------------------------------------------------------------------------------------------
+def empleado(request):
+    return render(request, 'servi/serv/empleado.html')
+#--------------------------------------------------------------------------------------------------
 def horarios(request):
-    return render(request, 'servi/horarios.html')
-#
+    return render(request, 'servi/serv/horarios.html')
+#--------------------------------------------------------------------------------------------------
 #
 #
