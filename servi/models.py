@@ -51,7 +51,7 @@ class MarcaHer(models.Model):
     def _str_(self):
         return self.nombre
     
-class Maquinaria(models.Model):
+class herramientas(models.Model):
     nombre = models.CharField(max_length=(50))
     modelo = models.CharField(max_length=(50))
     marca = models.ForeignKey(MarcaHer, on_delete=models.PROTECT)
