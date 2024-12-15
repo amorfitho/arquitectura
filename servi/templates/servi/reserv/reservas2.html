@@ -29,77 +29,39 @@
         </nav>
     </header>
     <div>
-        <div class="image-container">
-            <img class="img_fondo" src="../static/img/imagen de fondo.jpg" alt="si">
-            <div class="text-overlay">
-                <div class="column">
-                    <div class="row">
-                        <div class="mes">
-                            <strong> Octubre </strong>
-                            <br>
-                            <strong> 2024 </strong>
-                        </div>
-                        <table>
-                            <tr>
-                                <th>Lunes</th>
-                                <th>Martes</th>
-                                <th>Miercoles</th>
-                                <th>Jueves</th>
-                                <th>Viernes</th>
-                                <th>Sábado</th>
-                                <th>Domingo</th>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>6</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>8</td>
-                                <td>9</td>
-                                <td>10</td>
-                                <td>11</td>
-                                <td>12</td>
-                                <td>13</td>
-                            </tr>
-                            <tr>
-                                <td>14</td>
-                                <td>15</td>
-                                <td>16</td>
-                                <td>17</td>
-                                <td>18</td>
-                                <td>19</td>
-                                <td>20</td>
-                            </tr>
-                            <tr>
-                                <td>21</td>
-                                <td>22</td>
-                                <td>23</td>
-                                <td>24</td>
-                                <td>25</td>
-                                <td>26</td>
-                                <td>27</td>
-                            </tr>
-                            <tr>
-                                <td>28</td>
-                                <td>29</td>
-                                <td>30</td>
-                                <td>31</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+        <div class="card-body">
+            <div class="col-12 col-md-6 offset-md-3">
+
+
+                <Table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Modelo</th>
+                        <th>Patente</th>
+                        <th>Marca</th>
+                        <th>Servicio</th>
+                        <th>Fecha</th>
+                        <th>Precio</th>
+                    </tr>
+
+                    <tr>
+                        <td>{{ reserva.nombre  }}</td>
+                        <td>{{ reserva.email }}</td>
+                        <td>{{ reserva.modelo }}</td>
+                        <td>{{ reserva.patente }}</td>
+                        <td>{{ reserva.marca }}</td>
+                        <td>{{ reserva.servicio }}</td>
+                        <td>{{ reserva.fecha }}</td>
+                        <td>{{ reserva.precio }}</td>
+                    </tr>
+
+
+                </Table>
+
             </div>
+
         </div>
-        </main>
         <footer>
             <div class="row">
                 <div class="column">
@@ -140,6 +102,8 @@
                 <div class="column">
                 </div>
             </div>
+        </footer>
+    </div>
 </body>
 
 </html>
