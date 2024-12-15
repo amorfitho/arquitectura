@@ -100,6 +100,8 @@ opciones_servicio =[
     [7,"otros servicios"]
 ]
 
+
+
 class Cita(models.Model):
     nombre = models.CharField(max_length=(60))
     email = models.EmailField()

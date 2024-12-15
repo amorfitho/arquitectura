@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import CitaForm
 
 # Create your views here.
 
@@ -28,7 +29,20 @@ def empleado(request):
     return render(request, 'servi/serv/empleado.html')
 #--------------------------------------------------------------------------------------------------
 def horarios(request):
-    return render(request, 'servi/serv/horarios.html')
+
+    data={
+        'form': CitaForm()
+    }
+
+    if request.method== 'POST':
+        formulario = CitaForm(data= request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            data["mensaje"] = "contacto guardado"
+        else:
+            data ["from"] = formulario
+
+    return render(request, 'servi/serv/horarios.html', data )
 #--------------------------------------------------------------------------------------------------
 #
 #

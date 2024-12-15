@@ -12,3 +12,4 @@ admin.site.register(MarcaHer)
 admin.site.register(herramientas)
 admin.site.register(MarcaMac)
 admin.site.register(Maquinaria)
+
