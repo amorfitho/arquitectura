@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 #======proveedor
 
@@ -133,3 +134,4 @@ class Contacto(models.Model):
 
     def _str_(self):
         return self.nombre
+

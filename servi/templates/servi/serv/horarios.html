@@ -23,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     </ul>
-                    <button class="btn btn-primary" type="button" onclick="window.location.href='{% url 'main' %}'">Volver a Inicio</button>
+                    <button class="btn btn-primary" type="button" href="{% url 'main' %}">Volver a Inicio</button>
                 </div>
             </div>
         </nav>
@@ -33,17 +33,9 @@
             <div class="card-body">
                 <form action="" method="post">
                     {% csrf_token %}
-                    {% for field in form %}
-                        <div class="mb-3">
-                            <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
-                            {{ field }}
-                            {% if field.errors %}
-                                <div class="text-danger">
-                                    {{ field.errors }}
-                                </div>
-                            {% endif %}
-                        </div>
-                    {% endfor %}
+                    
+                    {{ form }}
+
                     <button type="submit" class="btn btn-primary mt-3">Realizar cita</button>
                     {{ mensaje }}
                 </form>

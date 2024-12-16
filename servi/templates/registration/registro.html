@@ -16,37 +16,18 @@
 <body>
     <header>
         <!-- place navbar here -->
-        <button href="{% url 'main' %}" type="submit" class="btn btn-primary volver" type="button" class="btn btn-primary volver">Volver</button>
+        <a href="{% url 'main' %}" type="submit" class="btn btn-primary volver" type="button" class="btn btn-primary volver">Volver</a>
         <section>
             <div class="contenedor">
                 <div class="card">
                     <div class="card-body">
                         <h2>Registro</h2>
-                        <form action="#">
-                            <div class="input-contenedor">
-                                <i class="fa-solid fa-envelope"></i>
-                                <label for="#">Nombre</label>
-                                <input type="text" required>
-                            </div>
-                            <div class="input-contenedor">
-                                <i class="fa-solid fa-envelope"></i>
-                                <label for="#">Apellidos</label>
-                                <input type="text" required>
-                            </div>
-                            <div class="input-contenedor">
-                                <i class="fa-solid fa-envelope"></i>
-                                <label for="#">Email</label>
-                                <input type="email" required>
-                            </div>
-                            <div class="input-contenedor">
-                                <label for="#">Contraseña</label>
-                                <input type="password" required>
-                            </div>
-                            <div class="input-contenedor">
-                                <label for="#">Confirmar contraseña</label>
-                                <input type="password" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                        <form action="#" method="post">
+                            
+                            {% csrf_token %}
+                
+                            {{  form }}
+                            
                         </form>
                         <div class="registrar">
                             <p>¿Ya tiene su cuenta? <a href="{% url 'login' %}">Iniciar sesión</a></p>

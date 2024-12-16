@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .forms import CitaForm
+from .forms import CitaForm, CustomUser
+from .models import Cita
 
 # Create your views here.
 
@@ -11,10 +12,22 @@ def login(request):
     return render(request, 'registration/login.html')
 #--------------------------------------------------------------------------------------------------
 def registro(request):
+
+    data= {
+        'form':CustomUser()
+    }
+
     return render(request, 'registration/registro.html')
 #--------------------------------------------------------------------------------------------------
 def reservas(request):
-    return render(request, 'servi/reserv/reservas.html')
+
+    citas = Cita.objects.all()
+
+    data= {
+        'citas': citas
+    }
+
+    return render(request, 'servi/reserv/reservas.html', data)
 #--------------------------------------------------------------------------------------------------
 def reservas2(request):
     return render(request, 'servi/reserv/reservas2.html')
@@ -38,7 +51,7 @@ def horarios(request):
         formulario = CitaForm(data= request.POST)
         if formulario.is_valid():
             formulario.save()
-            data["mensaje"] = "contacto guardado"
+            data["mensaje"] = "cita guardada"
         else:
             data ["from"] = formulario
 

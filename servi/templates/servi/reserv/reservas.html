@@ -29,8 +29,29 @@
         </nav>
     </header>
     <div>
-        <div class="image-container">
-            <img class="img_fondo" src="{% static 'img/imagen de fondo.jpg' %}" alt="si">
+        <div>
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Modelo</th>
+                    <th>Patente</th>
+                    <th>Marca</th>
+                    <th>Servicio</th>
+                    <th>Fecha</th>
+                </tr>
+                {% for c in citas %}
+                <tr>
+                    <td>{{ c.nombre | title }}</td>
+                    <td>{{ c.email | title }}</td>
+                    <td>{{ c.modelo | title }}</td>
+                    <td>{{ c.patene | title }}</td>
+                    <td>{{ c.marca | title }}</td>
+                    <td>{{ c.servicio | title }}</td>
+                    <td>{{ c.fecha | title }}</td>
+                </tr>
+                {% endfor %}
+            </table>
         </div>
         <footer>
             <div class="row">
@@ -70,8 +91,9 @@
                     </ul>
                 </div>
                 <div class="column">
+            
                 </div>
-            </div>
+    </div>
 </body>
 
 </html>
